@@ -1,4 +1,4 @@
-package inheritance;
+package withArrayList;
 
 public class VIPCustomer extends Customer {
 	
@@ -16,7 +16,7 @@ public class VIPCustomer extends Customer {
 		this.customerID = customerID;
 		this.customerName = customerName;
 		customerGrade = "VIP";
-		bonusRatio = 0.02;
+		bonusRatio = 0.05;
 		this.agentID = agentID;
 	}
 	
@@ -25,6 +25,13 @@ public class VIPCustomer extends Customer {
 	@Override
 	public int calcPrice(int price) {
 		return super.calcPrice(price);
+	}
+	
+	
+
+	@Override
+	public String showCustomerInfo() {
+		return super.showCustomerInfo() + "담당 상담원 아이디는 " + agentID + "입니다";
 	}
 
 	public int getAgentID() {
