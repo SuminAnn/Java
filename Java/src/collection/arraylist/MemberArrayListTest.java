@@ -19,6 +19,7 @@ public class MemberArrayListTest {
 		memberArryList.showAll();
 		
 		memberArryList.removeMember(memberKim.getMemberID());
+		memberArryList.iterator(memberKim.getMemberID());
 		memberArryList.showAll();
 	}
 }
