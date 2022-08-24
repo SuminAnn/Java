@@ -1,9 +1,13 @@
 package collection;
 
-public class Member {
+import java.util.Comparator;
+
+public class Member implements Comparable<Member>, Comparator<Member> {
 
 	private int memberID;
 	private String memberName;
+	
+	public Member() {}
 	
 	public Member(int memberID, String memberName) {
 		this.memberID = memberID;
@@ -43,6 +47,18 @@ public class Member {
 			}else return false;
 		}
 		return false;
+	}
+
+	@Override
+	public int compareTo(Member member) {
+		
+		return (this.memberID - member.memberID); //오름차순
+	}
+
+	@Override
+	public int compare(Member member1, Member member2) {
+		
+		return (member1.memberID - member2.memberID) * -1; //내림차순
 	}
 	
 	
